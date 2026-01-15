@@ -10,7 +10,7 @@
 name: Workstations
 
 agent_options:
-  path: ../lib/agent-options.yml
+  - path: ../lib/agent-options.yml
 controls:
   scripts:
     - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
@@ -19,6 +19,6 @@ team_settings:
   secrets:
     - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
   features:
-    enable_host_users: true
-    enable_software_inventory: true
+    - enable_host_users: true
+    - enable_software_inventory: true
 software:
